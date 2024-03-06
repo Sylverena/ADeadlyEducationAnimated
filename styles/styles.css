@@ -1,0 +1,99 @@
+html, body {
+    height: 100%;
+}
+
+.book-cover {
+    position: absolute;
+    width: 400px;
+    height: 600px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border: solid black 1px;
+
+    background-color: #2B2827;
+    box-sizing: border-box;
+}
+
+.text {
+    color: #E7D1AD;
+    text-align: center;
+    font-family: "Comfortaa", sans-serif;
+    font-size: .75em;
+    letter-spacing: .5em;
+}
+
+h2 {
+    color: #E7D1AD;
+    font-family: "Namdhinggo", sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 1em;
+    font-style: italic;
+}
+
+.text > h1:nth-child(1)
+{
+    margin: 5% auto -2.5% auto;
+}
+
+.text > h1 {
+    margin: 2.5% auto 0 auto;
+}
+
+.deadly {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    translate: -5%;
+}
+
+.wheel-container img
+{
+    position: absolute;
+}
+
+#moon-phase-ring
+{
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#eye-snake-book
+{
+    position: relative;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%,22%);
+    margin-bottom: 10%;
+}
+
+#inner-phase-ring
+{
+    width: 38%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#author-name
+{
+    position: relative;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-700%);
+}
+
+#education
+{
+    position: relative;
+    transform: translate(7.5%,-115%);
+}
