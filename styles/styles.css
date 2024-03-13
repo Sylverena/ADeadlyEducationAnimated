@@ -15,6 +15,9 @@ html, body {
 
     background-color: #2B2827;
     box-sizing: border-box;
+
+    overflow: hidden;
+
 }
 
 .text {
@@ -37,10 +40,14 @@ h2 {
 .text > h1:nth-child(1)
 {
     margin: 5% auto -2.5% auto;
+    animation: fade-in 1s 8.5s forwards ease-out;
+    opacity: 0;
 }
 
 .text > h1 {
     margin: 2.5% auto 0 auto;
+    animation: fade-in 1s 9s forwards ease-out;
+    opacity: 0;
 }
 
 .deadly {
@@ -49,6 +56,21 @@ h2 {
     margin: 0 auto;
     display: block;
     translate: -5%;
+    animation: fade-in 1s 8s forwards ease-out;
+    opacity: 0;
+}
+
+.star {
+    color: #E7D1AD;
+    position: absolute;
+    opacity: 0;
+    animation: fade-in 1s 6s forwards ease;
+}
+
+.lesson, #author-name
+{
+    animation: fade-in 1s 9.5s forwards ease-out;
+    opacity: 0;
 }
 
 .wheel-container img
@@ -61,7 +83,9 @@ h2 {
     width: 50%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    translate: -50% -50%;
+    transform-origin: center;
+    animation: clock 8s ease forwards;
 }
 
 #eye-snake-book
@@ -71,8 +95,10 @@ h2 {
     top: 50%;
     left: 50%;
     z-index: -1;
-    transform: translate(-50%,22%);
+    translate: -50% 22%;
     margin-bottom: 10%;
+    opacity: 0;
+    animation: fade-in 1s 8s ease-out forwards;
 }
 
 #inner-phase-ring
@@ -80,7 +106,9 @@ h2 {
     width: 38%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    translate: -50% -50%;
+    transform-origin: center;
+    animation: clock 8s ease reverse forwards;
 }
 
 #author-name
@@ -96,4 +124,93 @@ h2 {
 {
     position: relative;
     transform: translate(7.5%,-115%);
+}
+
+/* Animations */
+@keyframes clock {
+    0% {
+        transform: rotate(0deg);
+    }
+    1% {
+        transform: rotate(45deg);
+    }
+
+    12.5% {
+        transform: rotate(40deg);
+    }
+    13.5% {
+        transform: rotate(90deg);
+    }
+
+    25% {
+        transform: rotate(85deg);
+    }
+    26% {
+        transform: rotate(135deg);
+    }
+
+    37.5% {
+        transform: rotate(130deg);
+    }
+    38.5% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(175deg);
+    }
+    51% {
+        transform: rotate(225deg);
+    }
+
+    62.5% {
+        transform: rotate(220deg);
+    }
+    63.5% {
+        transform: rotate(270deg);
+    }
+
+    75% {
+        transform: rotate(265deg);
+    }
+    76%
+    {
+        transform: rotate(315deg);
+    }
+
+    87.5% {
+        transform: rotate(310deg);
+    }
+    88.5% {
+        transform: rotate(360deg);
+    }
+
+    94% {
+        transform: rotate(355deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fade-in {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 100%;
+    }
+}
+
+@keyframes uncover-text {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+    }
 }
